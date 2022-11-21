@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Zilla+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Secular+One&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body class */
+.body-class{
+  background-color: #5cdb95;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+/* Intro-Overlay */
+.overlay {  
+  height: 100%;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: #05386b; 
+  overflow: hidden; /* Disable scroll */
+  transition: 1.75s; /* 1 second transition effect slide up the overlay (height) */
+  filter: drop-shadow(0 0px 20px rgb(225, 225, 225));
+}
+
+/* Position the content inside the overlay */
+#overlay-content {
+    max-width: fit-content;
+    margin: 100px auto;
+}
+
+/* typing animation */
+#console{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#569CD6;
+}
+#log{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#D7BA7D;
+}
+.parenthesis{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#CD9731;
+}
+
+#content{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#CE9178;
+}
+
+#type-intro h1{
+  padding-top: 10px;
+  max-width: fit-content;
+  font-family: sans-serif;
+  font-size: 40px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+    typing 3s steps(100, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+/* bouncing effect on scroll down text */
+.text-scrolldown{
+    max-height: fit-content;
+    margin-top: 45%;
+    animation: bounce 1s linear;
+    animation-iteration-count: infinite;
+    font-size: 70px;
+    color: #edf5e1;
+}
+
+@keyframes bounce{
+    20%,50%,80%,to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}
+
+/* Top Navigation Bar */
+header{
+  background: #05386b;
+  position: fixed;
+  width: 100%;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 0;
+  transition: all .5s;
+  z-index: 9;
+}
+
+#nav-bar{
+  display:grid;
+  grid-template-columns: 100%;
+  width: 100%;
+  max-height: fit-content;
+  margin: 10px auto;
+  font-family: 'Secular One', sans-serif;
+  /* font-family: 'Russo One', sans-serif; */
+  max-height: 65px;
+  /* box-shadow: 0px 5px 0px #dedede; */
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+}
+
+.img-logo{
+    width: 100px;
+}
+#home{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+nav {
+  width: 80%;
+  margin: 0 auto;
+  background: inherit;
+  padding: 10px 0;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #edf5e1;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+  padding: 20px;
+  letter-spacing: 3px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2);
+  color: #edf5e1;
+}
+
+/* stroke animation on hover*/
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #edf5e1;
+  height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+/* pop-up on scroll up (append) */
+.scroll-down{
+  transform: translate3d(0, -100%, 0)
+}
+
+.scroll-up{
+  filter: drop-shadow(0 -10px 10px rgb(100, 100, 100));
+}
+
+/* back to top button */
+/* change naming later */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(60, 60, 60); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px; /* Some padding */
+  border-radius: 150px; /* Rounded corners */
+}
+
+.arrow-up{
+  width: 50px;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  animation: bounce-in 1s linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce-in{
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% { transform: scale(.9); }
+  100% { transform: scale(1); }
+}
+/* Main Contents Container */
+.main-contents{
+    font-family: 'Secular One', sans-serif;
+    background-color: #05386b;
+    padding-top: 110px;
+    /* filter: drop-shadow(0 0 10px rgb(190, 190, 190)); */
+}
+.section{
+    min-height:100vh;
+}
+
+/* section 1 */
+/* .about-inner-container{
+  position: relative;
+  min-height: 100vh;
+  border: solid;
+}
+.picture-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.self-image{
+  position: -webkit-sticky;
+  position: sticky;
+  width: 55%;
+  border-radius: 100px;
+  /* border-radius: 200px; */
+  filter: drop-shadow(0 0 20px rgb(40, 40, 40));
+}
+
+.web-dev-intro{
+  font-size: 3rem;
+  color: #edf5e1;
+}
+
+.about-me-text-container{
+  max-width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: justify;
+  color: #edf5e1;
+}
+.about-me-text{
+  font-size: 1.5rem;
+  margin-right: 10%;
+}
+/* Section 2 */
+
+.projects-container{
+  position: relative;  
+  width: 100%;
+  display: block;
+  align-items: center;
+}
+/* swiper */
+.swiper{
+  height: 75vh;
+
+  border: solid;
+}
+
+.card{
+  position: relative;
+  background: #8ee4af;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  height: 90%;
+}
+
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+.s2 .card .image img{
+  width: 100%;
+  padding: 3px;
+  background: #7d2ae8;
+}
+
+section .card .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.card .media-icons{
+  position: absolute;
+  top: 100%;
+  display: inline-block;
+}
+
+.card .media-icons i{
+  transform: scale(2);
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.card .media-icons i:hover{
+  transform: scale(3);
+}
+
+.card .project-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color:  black;
+} 
+
+.project-details .project-name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.project-details .project-details{
+  font-size:15px;
+  font-weight: 500;
+}
+
+
+.technologies-used{
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.swiper-pagination{
+  position: absolute;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: #000000;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  opacity: 0.7;
+  color: #7d2ae8;
+  transition: all 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 1;
+  color: #7d2ae8;
+}

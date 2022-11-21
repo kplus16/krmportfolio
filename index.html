@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kendrick Ronel Mundiz</title>
+    <link rel="stylesheet" href="./files/style.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    
+    <!-- imported stylesheets -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> -->
+</head>
+<body class="body-class"> 
+    <!-- Intro Overlay -->
+    <div id="overlay" class="overlay">
+    <div id="overlay-content">
+          <div id="type-intro">
+            <h1>
+              <span id="console">console</span>
+              <span id="log">.log</span>
+              <span class="parenthesis">(</span>
+              <span id="content">"Hey! I am Kendrick and I am a <b>WEB DEVELOPER</b>."</span>
+              <span class="parenthesis">)</span>
+            </h1>
+          </div>
+          <div class="text-secondary text-center container-scrolldown">
+            <h1 class="text-scrolldown">Scroll down</h1>
+          </div>
+    </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header id="nav-container">
+      <div class="nav-bar" id="nav-bar">
+        <!-- <div id="home">
+          <a href="#top">
+            <img src="./files/images/logo-km.png" class="img-logo">
+          </a>
+        </div> -->
+        <div id="links">
+          <nav class="stroke">
+            <ul>
+              <li><a href="#about" class=" text-decoration-none">About me</a></li>
+              <li><a href="#projects" class=" text-decoration-none">See my works</a></li>
+              <li><a href="#contact" class=" text-decoration-none">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Back to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top" tooltip="Back to top">
+      <img src="./files/images/arrow-up.png" class="arrow-up">
+    </button>
+
+    
+
+
+    <!-- main container -->
+    <div class="main-contents container-fluid" id="main-contents">
+        
+        <!-- first section -->
+        <div class="section about-container border border-secondary">
+            <!-- <h1 class="color-primary text-center">Who am I?</h1> -->
+            <div class="row about-inner-container">
+              <div class="col-6 p-3 mb-3 text-center picture-container">
+                <img src="./files/images/Kendrick Ronel Mundiz.png" class="self-image p-5 " >
+                <p class="web-dev-intro text-center">Web Developer | Graphic Design</p> 
+            </div>
+            <div class="col-6 about-me-text-container">
+                <p class="about-me-text pl-5 pr-5">Hey there! I am Kendrick Ronel Mundiz, I build engaging and fun websites for everyone. I believe web development is a place of innovation and discovery. </p>
+            </div>
+            </div>
+        </div>
+
+        <!-- second section -->
+        <div class="section s2 projects-container border border-secondary" id="projects">
+            <h1 class="text-center">My Projects</h1>
+            <!-- swiper start -->
+            <div class="swiper mySwiper container">
+              <div class="swiper-wrapper content">
+
+                <div class="swiper-slide card">
+                  <div class="card-content">
+                    <div class="image">
+                      <img src="./files/images/Projects Snips/Portfolio.png" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                      <a href=""><i class="fa-solid fa-link"></i></i></a>
+                      <a href=""><i class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="project-details">
+                      <span class="project-name">Portfolio Project</span>
+                      <span class="project-details">The portfolio you are looking at now</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide card">
+                  <div class="card-content">
+                    <div class="image">
+                        <img src="./files/images/Projects Snips/bingles-mainmenu.png">
+                    </div>
+
+                    <div class="media-icons">
+                      <a href="https://github.com/kplus16/binglessalesandinventory" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="project-details">
+                      <span class="project-name">Bingles Sales and Inventory</span>
+                      <span class="project-details">A sales and inventory system created for Bingles Party Shoppe as part of the Final Requiremnets of the Systems Analysis and Design Course</span>
+                      <span class="project-name">Technologies Used</span>
+                      <ul class="technologies-used">
+                        <li>VB.net</li>
+                        <li>Visual Studio</li>
+                        <li>MySQL</li>
+                        <li>SAP Crystal Reports</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide card">
+                  <div class="card-content">
+
+                    <div class="image">
+                      <img src="./files/images/Projects Snips/launchpad-mainmenu.webp">
+                    </div>
+
+                    <div class="media-icons">
+                      <a href="https://github.com/kplus16/launchpadspreadsheet" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="project-details">
+                      <span class="project-name">LaunchPad Spreadsheet</span>
+                      <span class="project-details">A spreadsheet web application created for The Launchpad Inc. as part of the final assessment for my On the Job (OJT) training</span>
+                      <span class="project-name">Technologies Used</span>
+                      <ul class="technologies-used">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                          <ul>
+                            <li>Bootstrap</li>
+                          </ul>
+                        <li>PHP</li>
+                          <ul>
+                            <li>Codeigniter</li>
+                          </ul>
+                        <li>Javascript</li>
+                          <ul>
+                            <li>AJAX</li>
+                            <li>JQuery</li>
+                          </ul>
+                        <li>MySQL</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide card">
+                  <div class="card-content">
+                    <div class="image">
+                      <img src="./files/images/arrow-up.png" alt="">
+                    </div>
+
+                    <div class="media-icons">
+                      <a href="https://github.com/kplus16/launchpadspreadsheet"><i class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="project-details">
+                      <span class="project-name">LaunchPad Spreadsheet</span>
+                      <span class="project-details">The portfolio you are looking at now</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+    </div>
+
+
+
+
+
+
+
+
+        <!-- third section -->
+        <div class="section  border border-secondary" >
+            
+        </div>
+        <!-- fourth section -->
+        <div class="section s1">
+
+        </div>
+        <!-- fifth section -->
+        <div class="section s1 contact-container" id="contact">
+            <h1 class="text-center color-primary">Contact Me Form</h1>
+            <h5>fb</h5>
+            <h5>github</h5>
+            <h5>linkedin</h5>
+            <form>
+              <input type="text" name="fullname" placeholder="fullname" required>
+              <input type="email" name="fullname" placeholder="fullname" required>
+              <textarea placeholder="Type your message here..." name="message" style="width: 300px; height: 100px; resize: none;"rows="10" cols="30"></textarea>
+            </form>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./files/app.js"></script>
+</body>
+</html>
