@@ -532,7 +532,6 @@ nav.fill ul li a:hover:after {
   min-height: 90vh;
   display: grid;
   grid-template-columns: 50% 50%;
-  border: solid white;
 }
 
 .cert-image{
