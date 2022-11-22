@@ -317,6 +317,25 @@ nav.fill ul li a:hover:after {
   font-size: 3rem;
   color: #fff;
 }
+.intro-media-icons{
+  position: relative;
+  display: inline-block;
+}
+
+.intro-media-icons i{
+  transform: scale(3);
+  color: #fff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.intro-media-icons a{
+  padding: 50px;
+  margin: 0 auto;
+}
+
+.intro-media-icons i:hover{
+  transform: scale(4);
+}
 
 .about-me-text-container{
   max-width: 100%;
@@ -413,8 +432,10 @@ nav.fill ul li a:hover:after {
 
 
 .media-icons{
-  position: relative;
   display: inline-block;
+  position: absolute;
+  right: 10px;
+  bottom: 10%;
 }
 
 .media-icons i{
@@ -505,20 +526,6 @@ nav.fill ul li a:hover:after {
 }
 
 
-.s2 .swiper-button-next, .swiper-button-prev{
-  margin: 20px;
-  transform: scale(2);
-  opacity: .5;
-  transition: all 0.3s ease;
-    position: relative;
-}
-
-.s2 .swiper-button-next:hover, .swiper-button-prev:hover{
-  transform: scale(2.2);
-  opacity: 1;
-  color:  #fff;
-    position: relative;
-}
 
 
 
