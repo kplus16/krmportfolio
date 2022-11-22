@@ -487,6 +487,14 @@ nav.fill ul li a:hover:after {
     height: inherit;
 }
 
+.s2 .swiper-pagination-bullet{
+  position: relative;
+  height: 7px;
+  width: 10px;
+  border-radius: 25px;
+  background: rgb(255, 255, 255);
+}
+
 .s2 .swiper-pagination-bullet-active{
   position: relative;
   height: 7px;
@@ -494,6 +502,7 @@ nav.fill ul li a:hover:after {
   border-radius: 25px;
   background: white;
 }
+
 
 .s2 .swiper-button-next, .swiper-button-prev{
   margin: 20px;
@@ -518,4 +527,8 @@ nav.fill ul li a:hover:after {
   display: grid;
   grid-template-columns: 50% 50%;
   border: solid white;
+}
+
+.cert-image{
+    width: 200px;
 }
