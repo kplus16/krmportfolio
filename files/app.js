@@ -62,9 +62,16 @@ function topFunction() {
 
 //swiper init
 const swiper = new Swiper(".myProjects", {
-      slidesPerView: 2,
-      spaceBetween: 50,
-      slidesPerGroup: 2,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      slidesPerGroup: 1,
+      breakpoints: {
+        720: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+          slidesPerGroup: 2,
+        },
+      },
       loopFillGroupWithBlank: true,
       pagination: {
         el: ".swiper-pagination",
