@@ -9,6 +9,7 @@
 
 /* body class */
 .body-class{
+  overflow-x: hidden;
   background-color: #242333;
 }
 
