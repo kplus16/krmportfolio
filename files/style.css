@@ -9,7 +9,7 @@
 
 /* body class */
 .body-class{
-  background-color: #5cdb95;
+  background-color: #242333;
 }
 
 html{
@@ -108,7 +108,7 @@ html{
 
 /* Top Navigation Bar */
 header{
-  background: #05386b;
+  background: #242333;
   position: fixed;
   width: 100%;
   margin-top: 0;
@@ -161,11 +161,11 @@ nav ul li {
 nav ul li a {
   display: block;
   text-decoration: none;
-  color: #edf5e1;
+  color: #fff;
   font-weight: 800;
   text-transform: uppercase;
   margin: 0 10px;
-  padding: 20px;
+  padding: 10px;
   letter-spacing: 3px;
 }
 
@@ -177,7 +177,7 @@ nav ul li a:before {
 
 nav ul li a:hover {
   transform: scale(1.2);
-  color: #edf5e1;
+  color: #fff;
 }
 
 /* stroke animation on hover*/
@@ -196,7 +196,7 @@ nav.fill ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #edf5e1;
+  background: #fff;
   height: 1px;
 }
 
@@ -234,12 +234,12 @@ nav.fill ul li a:hover:after {
 }
 
 .scroll-up{
-  filter: drop-shadow(0 -10px 10px rgb(100, 100, 100));
+  filter: drop-shadow(0 -10px 10px rgb(60, 60, 60));
 }
 
 /* back to top button */
 /* change naming later */
-#myBtn {
+#topBtn {
   display: none; /* Hidden by default */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
@@ -258,7 +258,7 @@ nav.fill ul li a:hover:after {
   width: 50px;
 }
 
-#myBtn:hover {
+#topBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
   animation: bounce-in 1s linear;
   animation-iteration-count: infinite;
@@ -275,15 +275,24 @@ nav.fill ul li a:hover:after {
 /* Main Contents Container */
 .main-contents{
     font-family: 'Secular One', sans-serif;
-    background-color: #05386b;
+    background-color: #242333;
     padding-top: 110px;
+    margin-left: 10%;
+    margin-right: 10%;
     /* filter: drop-shadow(0 0 10px rgb(190, 190, 190)); */
 }
+/* section global */
 .section{
     min-height:100vh;
+    padding: 10px;
 }
-
+.section h1{
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 3rem;
+}
 /* section 1 */
+
 /* .about-inner-container{
   position: relative;
   min-height: 100vh;
@@ -297,7 +306,7 @@ nav.fill ul li a:hover:after {
 .self-image{
   position: -webkit-sticky;
   position: sticky;
-  width: 55%;
+  width: 65%;
   border-radius: 100px;
   /* border-radius: 200px; */
   filter: drop-shadow(0 0 20px rgb(40, 40, 40));
@@ -305,7 +314,7 @@ nav.fill ul li a:hover:after {
 
 .web-dev-intro{
   font-size: 3rem;
-  color: #edf5e1;
+  color: #fff;
 }
 
 .about-me-text-container{
@@ -313,7 +322,7 @@ nav.fill ul li a:hover:after {
   margin-top: auto;
   margin-bottom: auto;
   text-align: justify;
-  color: #edf5e1;
+  color: #fff;
 }
 .about-me-text{
   font-size: 1.5rem;
@@ -321,28 +330,63 @@ nav.fill ul li a:hover:after {
 }
 /* Section 2 */
 
-.projects-container{
-  position: relative;  
-  width: 100%;
-  display: block;
-  align-items: center;
-}
+
 /* swiper */
-.swiper{
+.myProjects{
   height: 75vh;
-
-  border: solid;
 }
 
-.card{
+/* swiper card */
+#card{
   position: relative;
-  background: #8ee4af;
+  background: #ecfcff;
   border-radius: 20px;
   margin: 20px 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  height: 90%;
+  max-height: 85%;
 }
 
+#card:hover{
+  transform: scale(1.05);
+  transition: .75s;
+}
+
+#card:hover .card-content{
+   filter: blur(.5rem);
+}
+ 
+
+
+/* bingles overlay */
+#bingles-overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 0; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  border-radius: 20px;
+  transition: .75s;
+}
+/* Portfolio overlay */
+#portfolio-overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 0; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  border-radius: 20px;
+  transition: .75s;
+}
 
 .card .card-content{
   display: flex;
@@ -350,84 +394,128 @@ nav.fill ul li a:hover:after {
   align-items: center;
   padding: 30px;
   position: relative;
-  z-index: 100;
+  z-index: 3;
+  max-height: 100%;
 }
+
+.s2 .image{
+  width: inherit;
+}
+
 
 .s2 .card .image img{
   width: 100%;
   padding: 3px;
-  background: #7d2ae8;
+  background: #fff;
 }
 
-section .card .image img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #fff;
-}
 
-.card .media-icons{
-  position: absolute;
-  top: 100%;
+
+.media-icons{
+  position: relative;
   display: inline-block;
 }
 
-.card .media-icons i{
-  transform: scale(2);
-  color: rgb(0, 0, 0);
+.media-icons i{
+  transform: scale(5);
+  color: #000;
   transition: all 0.3s ease;
   cursor: pointer;
-  margin-right: 15px;
-  margin-left: 15px;
+}
+.media-icons a{
+  padding: 50px;
+  margin: 0 auto;
 }
 
-.card .media-icons i:hover{
-  transform: scale(3);
+.media-icons i:hover{
+  transform: scale(6);
 }
 
-.card .project-details{
+.project-details-container{
+  overflow: hidden;
+  display: none;
+  height: 0%;
+  transition: height .75s;
+  display: relative;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
+  color:  #fff;
+  height: inherit;
+}
+
+#card:hover .project-details-container{
+  padding: 10px;
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-  color:  black;
-} 
-
-.project-details .project-name{
-  font-size: 20px;
-  font-weight: 600;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
 }
 
-.project-details .project-details{
-  font-size:15px;
+.project-name{
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+}
+
+.project-details-container .project-details{
+  color: black;
+  text-align: justify;
+  padding: 50px;
+  margin: 0;
+  font-size:22px;
   font-weight: 500;
 }
 
 
 .technologies-used{
+  color: black;
   columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+  padding: 20px;
+  font-size:22px;
+  margin-left: 10%;
+  text-align: left;
 }
 
-.swiper-pagination{
-  position: absolute;
+
+.swiper-nav-container{
+    position: relative;
+    height: inherit;
 }
 
-.swiper-pagination-bullet{
+.s2 .swiper-pagination-bullet-active{
+  position: relative;
   height: 7px;
   width: 26px;
   border-radius: 25px;
-  background: #000000;
+  background: white;
 }
 
-.swiper-button-next, .swiper-button-prev{
-  opacity: 0.7;
-  color: #7d2ae8;
+.s2 .swiper-button-next, .swiper-button-prev{
+  margin: 20px;
+  transform: scale(2);
+  opacity: .5;
   transition: all 0.3s ease;
+    position: relative;
 }
-.swiper-button-next:hover, .swiper-button-prev:hover{
+
+.s2 .swiper-button-next:hover, .swiper-button-prev:hover{
+  transform: scale(2.2);
   opacity: 1;
-  color: #7d2ae8;
+  color:  #fff;
+    position: relative;
+}
+
+
+
+/* section 3 */
+.content-3{
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: solid white;
 }

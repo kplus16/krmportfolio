@@ -1,8 +1,9 @@
 const header = document.getElementById("nav-container");
 // let headerHeight = header.offsetHeight;
-let mybutton = document.getElementById("myBtn");
+let mybutton = document.getElementById("topBtn");
 let lastScroll = 0;
 let slideIndex = 1;
+AOS.init();
 var body = document.body,
     html = document.documentElement;
 
@@ -60,7 +61,7 @@ function topFunction() {
 }
 
 //swiper init
-const swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".myProjects", {
       slidesPerView: 2,
       spaceBetween: 50,
       slidesPerGroup: 2,
@@ -74,6 +75,8 @@ const swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
       },
 });
+
+
 
 // JS Carousel
 
