@@ -264,8 +264,8 @@
        <!-- second section end -->
         <!-- third section -->
         <div class="section s3" id="experience">
-            <div class="content-3">
-                  <h1 class="text-center">Experience</h1>
+            <div data-aos="zoom-in" class="content-3">
+                  <h1 class="text-center mb-5">Experience</h1>
                   <div class="timeline">
                     <div data-aos="fade-right" class="exp-container left">
                       <div class="exp-content">
@@ -349,21 +349,33 @@
                 </div>
         </div>
         <!-- fifth section -->
-        <div class="section s5" id="contact">
-            <h1 class="text-center color-primary">Contact Me Form</h1>
-            <h5>fb</h5>
-            <h5>github</h5>
-            <h5>linkedin</h5>
-            <div>
-              <form>
-                <input type="text" name="fullname" placeholder="fullname" required>
-                <input type="email" name="fullname" placeholder="fullname" required>
-                <textarea placeholder="Type your message here..." name="message" style="width: 300px; height: 100px; resize: none;"rows="10" cols="30"></textarea>
-              </form>
-            </div>
-            
+        <div data-aos="zoom-in" class="section s5" id="contact">
+          <h1 class="text-center color-primary mb-5">Work with me</h1>
+          <div class="form-container">
+            <form action="mailto:kendrickronelmundiz@gmail.com">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="philippines">Philippines</option>
+                <option value="usa">USA</option>
+                <option value="australia">Australia</option>
+              </select>
+
+              <label for="subject">Message:</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <div class="submit-btn-container">
+                  <input type="submit" value="Submit">
+              </div>
+
+            </form>
+          </div>
         </div>
-        <!-- fourth section end -->
+        <!-- fifth section end -->
     </div>
     <!-- main contents end -->
 

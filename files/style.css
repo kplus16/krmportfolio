@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Zilla+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -275,12 +273,12 @@ nav.fill ul li a:hover:after {
 }
 /* Main Contents Container */
 .main-contents{
-    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+    font-family: 'Oswald', sans-serif;
+    /* font-family: Futura,Trebuchet MS,Arial,sans-serif; */
     background-color: #242333;
     padding-top: 110px;
     margin-left: 10%;
     margin-right: 10%;
-    /* filter: drop-shadow(0 0 10px rgb(190, 190, 190)); */
 }
 /* section global */
 .section{
@@ -665,4 +663,41 @@ nav.fill ul li a:hover:after {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* section 5 */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #05386b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.submit-btn-container{
+  text-align: center;
+}
+
+input[type=submit]:hover {
+  opacity: .9;
+}
+
+.form-container {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
 }
