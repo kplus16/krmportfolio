@@ -46,14 +46,24 @@
         </div> -->
         <div id="links">
           <nav class="stroke">
-            <ul>
+            <ul class="navbar-links">
               <li><a href="#about" class=" text-decoration-none">About me</a></li>
               <li><a href="#projects" class=" text-decoration-none">See my works</a></li>
               <li><a href="#experience" class=" text-decoration-none">Experience and Certifications</a></li>
               <li><a href="#contact" class=" text-decoration-none">Contact</a></li>
             </ul>
+            <div class="dropdown">
+              <span class="text-light"><i class="fa-solid fa-bars"></i></span>
+              <div class="dropdown-content text-center text-light">
+                <div class="dropdown-link p-1"><a href="#about" class=" text-decoration-none">About me</a></div>
+                <div class="dropdown-link p-1"><a href="#projects" class=" text-decoration-none">See my works</a></div>
+                <div class="dropdown-link p-1"><a href="#experience" class=" text-decoration-none">Experience and Certifications</a></div>
+                <div class="dropdown-link p-1"><a href="#contact" class=" text-decoration-none">Contact</a></div>
+              </div>
+            </div>
           </nav>
         </div>
+        
       </div>
     </header>
     <!-- navbar end -->
@@ -86,6 +96,7 @@
                   <p class="about-me-text">Hey there! I am Kendrick Ronel Mundiz, I am a web developer and I solve your problems for you. I believe web development is a place for innovation and discovery. </p>
               </div>
             </div>
+            <!-- <h1 class="text-center">Skills</h1> -->
         </div>
 
         <!-- second section -->
@@ -295,14 +306,21 @@
                         <p>Started working as a sales representative for a small pharmaceutical company where I got real world experience selling their products from pharmacy to pharmacy and getting to travel all over Mindanao and parts of Visayas.</p>
                       </div>
                   </div>
-                  <div data-aos="fade-right" class="exp-container left">
+                  <div data-aos="fade-left" class="exp-container left">
+                      <div class="exp-content">
+                        <h2>December 2021</h2>
+                        <h2>Kredo Learning</h2>
+                        <p>Worked as an IT instructor teaching Full stack web development using HTML, CSS, Bootstrap, PHP, and MySQL</p>
+                      </div>
+                  </div>
+                  <div data-aos="fade-right" class="exp-container right">
                       <div class="exp-content">
                         <h2>December 2021</h2>
                         <h2>The Colour Cartel (AU)</h2>
                         <p>Started working as a graphic designer VA for a printing company where I was able to hone my skills in creating graphics using Adobe Illustrator and Adobe Photoshop.</p>
                       </div>
                     </div>
-                    <div data-aos="fade-left" class="exp-container right">
+                    <div data-aos="fade-left" class="exp-container left">
                       <div class="exp-content">
                         <h2>December 2021</h2>
                         <h2>Tenfold Australia/Abundium</h2>
@@ -339,7 +357,7 @@
                   </div>
                   <div  class="row mt-3">
                       <div data-aos="fade-right" class="col-sm-12 col-md-6 text-light text-center">
-                          <img class="cert-image bg-light" src="https://www.tesda.gov.ph/Content/images/logos/TesdaOfficialLogo.png">
+                          <img class="cert-image-nc bg-light" src="https://www.tesda.gov.ph/Content/images/logos/TesdaOfficialLogo.png">
                       </div>
                       <div data-aos="fade-left" class="col-sm-12 col-md-6 text-light text-center pt-5">
                         <h5>National Certificate II: Computer Systems Servicing</h5>
@@ -354,10 +372,10 @@
           <div class="form-container">
             <form action="mailto:kendrickronelmundiz@gmail.com">
               <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              <input type="text" id="fname" name="firstname" required placeholder="Your name..">
 
               <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <input type="text" id="lname" name="lastname" required placeholder="Your last name..">
 
               <label for="country">Country</label>
               <select id="country" name="country">
@@ -367,7 +385,7 @@
               </select>
 
               <label for="subject">Message:</label>
-              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              <textarea id="subject" name="subject" required placeholder="Write something.." style="height:200px"></textarea>
               <div class="submit-btn-container">
                   <input type="submit" value="Submit">
               </div>

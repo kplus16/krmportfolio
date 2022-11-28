@@ -4,10 +4,10 @@ let mybutton = document.getElementById("topBtn");
 let lastScroll = 0;
 let slideIndex = 1;
 AOS.init();
-var body = document.body,
+let body = document.body,
     html = document.documentElement;
 
-var height = Math.max( body.scrollHeight, body.offsetHeight, 
+let height = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 
                        
